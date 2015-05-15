@@ -1,0 +1,7 @@
+description: patterns to deal with elasticsearch logs
+owner: "Christian Kniep <christian@qnib.org>"
+tests:
+  shard_test1:
+     compare: "%{ES_SHARDS}"
+     input: "shards [1]/[3]"
+     result: { "es_shards_exp": "1", "es_shards_got": "3"}
